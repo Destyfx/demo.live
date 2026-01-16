@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Lock, Target, Zap, Brain, Shield, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Target, Zap, Brain, Shield, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import { supabase } from './lib/supabase';
 
 function App() {
@@ -96,8 +96,12 @@ function App() {
         <nav className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 group cursor-pointer">
-              <div className="relative">
-                <Lock className="w-8 h-8 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+              <div className="relative w-8 h-8">
+                <img
+                  src="/lockedin-logo.webp"
+                  alt="LOCKEDIN Logo"
+                  className="w-8 h-8 group-hover:opacity-80 transition-opacity"
+                />
                 <div className="absolute inset-0 bg-cyan-400 blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
               </div>
               <span className="text-2xl font-bold tracking-tighter">LOCKEDIN</span>
@@ -110,7 +114,11 @@ function App() {
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="relative inline-block mb-8">
                 <div className="absolute inset-0 bg-cyan-500 blur-3xl opacity-30 animate-glow" />
-                <Lock className="w-24 h-24 text-cyan-400 relative animate-float mx-auto" strokeWidth={1.5} />
+                <img
+                  src="/lockedin-logo.webp"
+                  alt="LOCKEDIN Logo"
+                  className="w-24 h-24 relative animate-float mx-auto"
+                />
               </div>
 
               <h1 className="text-7xl md:text-8xl font-black mb-6 tracking-tighter">
@@ -259,7 +267,11 @@ function App() {
         <footer className="border-t border-gray-900 py-12">
           <div className="container mx-auto px-6 text-center text-gray-600">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Lock className="w-5 h-5 text-cyan-400" />
+              <img
+                src="/lockedin-logo.webp"
+                alt="LOCKEDIN Logo"
+                className="w-5 h-5"
+              />
               <span className="font-semibold text-white">LOCKEDIN</span>
             </div>
             <p className="text-sm">
